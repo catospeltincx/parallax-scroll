@@ -1,0 +1,60 @@
+/* new stuff */
+/* section tag */
+/* een selectie in een document, sections should always have a heading */
+
+/* adding styles for the outer div: .wrapper  */
+.wrapper {
+  background-color: rgb(198, 198, 255);
+  height: 100vh;
+  /* verwijder scrollbars */
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* adding styles for the .section class */
+.parallax {
+  /* maakt dat alles gelaagd op elkaar komt, alle tags binnen dit element krijgen dezelfde positie, als we straks aan een child-element een position:absolute toevoegen, zal dit veranderen */
+  /* position: relative; */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-shadow: 0 0 5px #000000;
+  font-size: 35px;
+}
+
+/* adding styles for the parallax effect = element dat trager beweegt en zich in de achtergrond bevind */
+/* transforms for the parallax effect */
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(1.5);
+  background-size: 100%;
+  z-index: -1;
+}
+
+.static {
+  background: red;
+}
+
+#bg1::after {
+  background-image: url(/src/parallax_1.jpg);
+}
+
+#bg2::after {
+  background-image: url(/src/parallax_2.jpg);
+}
+
+#bg3::after {
+  background-image: url(/src/parallax_3.jpg);
+}
+
+#bg4::after {
+  background-image: url(/src/parallax_4.jpg);
+}

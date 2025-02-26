@@ -2,21 +2,27 @@
 /* section tag */
 /* een selectie in een document, sections should always have a heading */
 
+body {
+  margin: 0;
+}
+
 /* adding styles for the outer div: .wrapper  */
 .wrapper {
   height: 100vh;
-  /* overflow-x: hidden;
-  overflow-y: hidden; */
-  perspective: 2px;
 }
 
 /* SECTION */
+h1 {
+  color: rgb(253, 171, 99);
+  font-family: "Brush Script MT", cursive;
+  text-shadow: 0 0 15px #000;
+  font-size: 3.5em;
+}
 section {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  text-shadow: 0 0 5px #000;
+
   /* margin-bottom: 25vh; */
 }
 
